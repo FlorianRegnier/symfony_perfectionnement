@@ -1,0 +1,66 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+front_list_product:
+        path: /front/products/
+        controller: App\Controller\Front\ProductController::listProduct
+
+
+#CRUD TYPE
+
+admin_types_list:
+        path: /admin/types/
+        controller: App\Controller\Admin\AdminTypeController::listType
+
+admin_type_show:
+        path: /admin/type/{id}/
+        controller: App\Controller\Admin\AdminTypeController::showType
+
+admin_type_update:
+        path: /admin/update/type/{id}/
+        controller: App\Controller\Admin\AdminTypeController::typeUpdate
+
+admin_type_add:
+        path: /admin/add/type/
+        controller: App\Controller\Admin\AdminTypeController::addType
+
+admin_type_delete:
+        path: /admin/delete/type/{id}/
+        controller: App\Controller\Admin\AdminTypeController::deleteType
+
+
+#CRUD BRAND
+
+admin_brand_list:
+        path: /admin/brands/
+        controller: App\Controller\Admin\AdminBrandController::listBrand
+
+admin_brand_show:
+        path: /admin/brand/{id}/
+        controller: App\Controller\Admin\AdminBrandController::showBrand
+
+admin_brand_update:
+        path: /admin/update/brand/{id}/
+        controller: App\Controller\Admin\AdminBrandController::brandUpdate
+
+admin_brand_add:
+        path: /admin/add/brand/
+        controller: App\Controller\Admin\AdminBrandController::addBrand
+
+admin_brand_delete:
+        path: /admin/delete/brand/{id}/
+        controller: App\Controller\Admin\AdminBrandController::deleteBrand
+
+
+#CRUD COMMAND FRONT
+
+
+front_list_command:
+        path: /front/commands/
+        controller: App\Controller\Front\CommandController::listCommands
+
+front_show_command:
+        path: /front/command/{id}/
+        controller: App\Controller\Front\CommandController::showCommand
+

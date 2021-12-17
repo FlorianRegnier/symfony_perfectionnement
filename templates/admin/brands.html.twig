@@ -1,0 +1,32 @@
+{% extends "admin/base.html.twig" %}
+
+
+{% block main %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <h1>Liste des marques</h1>
+
+    <div class="brand-content">  
+
+        {% for brand in brands %}
+        <div class="brand-card">
+            
+            <a href="{{ path('admin_brand_show', { 'id' : brand.id }) }}" >
+                <h2  > {{ brand.name }} </h2>
+            </a>
+            <h3>   {{ brand.description }} </h3>
+         
+            
+          
+        </div>          
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}
+  

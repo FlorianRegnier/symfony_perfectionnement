@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+
+        
+        {{ form_start(productForm) }}
+
+            {{ form_label(productForm.name, 'Nom du produit : ', {'label_attr' : {'class' : 'label'} } ) }}
+            {{ form_widget(productForm.name, {'attr' : {'placeholder' : ' Nom du produit ', 'class' : 'title'} } ) }}
+
+            {{ form_label(productForm.description, 'Description du produit : ', {'label_attr' : {'class' : 'label'} } ) }}
+            {{ form_widget(productForm.description, {'attr' : {'placeholder' : ' Description du produit '} } ) }}
+
+             {{ form_label(productForm.price, 'Prix du produit : ', {'label_attr' : {'class' : 'label'} } ) }}
+            {{ form_widget(productForm.price, {'attr' : {'placeholder' : ' Prix du produit '} } ) }}
+
+             {{ form_label(productForm.stock, 'Stock du produit : ', {'label_attr' : {'class' : 'label'} } ) }}
+            {{ form_widget(productForm.stock, {'attr' : {'placeholder' : ' Stock du produit '} } ) }}
+
+            {{ form_label(productForm.type, 'Type du produit : ', {'label_attr' : {'class' : 'label'} } ) }}        
+            {{ form_widget(productForm.type) }}
+
+            {{ form_label(productForm.brand, 'Marque du produit : ', {'label_attr' : {'class' : 'label'} } ) }}        
+            {{ form_widget(productForm.brand) }}
+
+            {{ form_widget(productForm.submit, {'attr' : {'label' : 'Enregistrer' } } ) }}
+
+        {{ form_end(productForm) }}
+    
+    </body>
+</html>

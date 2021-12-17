@@ -1,0 +1,23 @@
+{% extends "front/base.html.twig" %}
+
+
+{% block main %}
+    
+
+    <h2>        {{ brand.name }}          </h2>
+    <p>         {{ brand.description }}   </p>  
+    
+    <h3>Liste des articles de la marque :</h3>
+    {% for produit in brand.products %}
+
+        <h3>  {{ produit.name }} </h3>  
+        
+    {% endfor %}
+   
+
+    
+
+   
+  
+   
+{% endblock %}

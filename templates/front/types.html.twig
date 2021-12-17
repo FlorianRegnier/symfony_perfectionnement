@@ -1,0 +1,24 @@
+{% extends "front/base.html.twig" %}
+
+
+{% block main %}
+
+    <h1>Liste des types</h1>
+
+    <div class="type-content">  
+
+        {% for type in types %}
+        <div class="type-card">
+            
+            <a href="{{ path('front_show_type', { 'id' : type.id }) }}" >
+                <h2  > {{ type.name }} </h2>
+            </a>
+          
+            
+          
+        </div>          
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}

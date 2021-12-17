@@ -1,0 +1,55 @@
+{% extends "front/base.html.twig" %}
+
+
+{% block main %}
+    {{batman}}
+
+    <h1>Liste des marques</h1>
+
+    <div class="brand-content">  
+
+        {% for brand in brands %}
+        <div class="brand-card">
+            
+            <a href="{{ path('front_show_brand', { 'id' : brand.id }) }}" >
+                <h2  > {{ brand.name }} </h2>
+            </a>
+          
+            
+          
+        </div>          
+        {% endfor %}
+
+
+    </div>
+
+
+    <hr>
+
+    
+
+    {% for gproduct in gproducts.getAll %}
+
+        <h3>{{ gproduct.name }}</h3>
+        
+    {% endfor %}
+
+    <hr>
+
+    {% for gtype in gtypes.getAll %}
+
+        <h3>{{ gtype.name }}</h3>
+        
+    {% endfor %}
+
+      <hr>
+
+    {% for gbrand in gbrands.getAll %}
+
+        <h3>{{ gbrand.name }}</h3>
+        
+    {% endfor %}
+
+
+    
+{% endblock %}

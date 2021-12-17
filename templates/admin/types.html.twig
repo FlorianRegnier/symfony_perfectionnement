@@ -1,0 +1,32 @@
+{% extends "admin/base.html.twig" %}
+
+
+{% block main %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <h1>Liste des types</h1>
+
+    <div class="type-content">  
+
+        {% for type in types %}
+        <div class="type-card">
+            
+            <a href="{{ path('admin_type_show', { 'id' : type.id }) }}" >
+                <h2  > {{ type.name }} </h2>
+            </a>
+            <h3>   {{ type.description }} </h3>
+         
+            
+          
+        </div>          
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}
+  

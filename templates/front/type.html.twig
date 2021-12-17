@@ -1,0 +1,24 @@
+{% extends "front/base.html.twig" %}
+
+
+{% block main %}
+    
+
+    <h2>        {{ type.name }}          </h2>
+    <h3>         {{ type.description }}   </h3>  
+    
+    <h3>Liste des articles du type :</h3>
+    {% for produit in type.products %}
+
+        <a href="{{ path('front_show_product', { 'id' : produit.id }) }}" >
+            <h4>  {{ produit.name }} </h4>  
+        </a>
+    {% endfor %}
+   
+
+    
+
+   
+  
+   
+{% endblock %}

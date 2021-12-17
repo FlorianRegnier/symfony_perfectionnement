@@ -1,0 +1,33 @@
+{% extends "admin/base.html.twig" %}
+
+
+{% block main %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <h1>Liste des produits</h1>
+
+    <div class="product-content">  
+
+        {% for product in products %}
+        <div class="product-card">
+            
+            <a href="{{ path('admin_product_show', { 'id' : product.id }) }}" >
+                <h2  > {{ product.name }} </h2>
+            </a>
+            <h3> Prix :  {{ product.price }} euros. </h3>
+            <h3> type :  {{ product.type.name }}. </h3>
+            <h3> Marque : {{ product.brand.name }}. </h3>
+            
+          
+        </div>          
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}
+  

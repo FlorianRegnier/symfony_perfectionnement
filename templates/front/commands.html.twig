@@ -1,0 +1,34 @@
+{% extends "front/base.html.twig" %}
+
+
+{% block main %}
+    
+
+    <h1>Liste des commandes</h1>
+
+    <div class="command-content">  
+
+        {% for command in commands %}
+        <div class="command-card">
+            
+            <a href="{{ path('front_show_command', { 'id' : command.id }) }}" >
+                <h2  > {{ command.numberOrder }} </h2>
+            </a>
+          
+            
+          
+        </div>          
+        {% endfor %}
+
+
+    </div>
+
+
+    <hr>
+
+    
+
+
+
+    
+{% endblock %}
